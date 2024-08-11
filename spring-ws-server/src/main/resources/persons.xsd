@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://notes.eduardoeljaiek.com/spring-ws-kata/gen"
+           targetNamespace="https://notes.eduardoeljaiek.com/spring-ws-kata/gen" elementFormDefault="qualified">
+
+    <xs:element name="getPersonsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="quantity" type="xs:integer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getPersonsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Allow multiple person elements -->
+                <xs:element name="persons" type="tns:person" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="person">
+        <xs:sequence>
+            <xs:element name="firstname" type="xs:string"/>
+            <xs:element name="lastname" type="xs:int"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="phone" type="xs:string"/>
+            <xs:element name="birthday" type="xs:date"/>
+            <xs:element name="gender" type="tns:gender"/>
+            <xs:element name="address" type="tns:address"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="gender">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="FEMALE"/>
+            <xs:enumeration value="MALE"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="address">
+        <xs:sequence>
+            <xs:element name="street" type="xs:string"/>
+            <xs:element name="buildingNumber" type="xs:string"/>
+            <xs:element name="city" type="xs:string"/>
+            <xs:element name="zipcode" type="xs:string"/>
+            <xs:element name="country" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -1,4 +1,4 @@
-package io.github.ehayik.kata.springwsserver;
+package io.github.ehayik.kata;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

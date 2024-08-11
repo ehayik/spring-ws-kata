@@ -1,4 +1,4 @@
-package io.github.ehayik.kata.springwsserver;
+package io.github.ehayik.kata;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
