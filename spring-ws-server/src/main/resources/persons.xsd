@@ -5,7 +5,7 @@
     <xs:element name="getPersonsRequest">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="quantity" type="xs:integer"/>
+                <xs:element name="quantity" type="xs:int"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -14,20 +14,20 @@
         <xs:complexType>
             <xs:sequence>
                 <!-- Allow multiple person elements -->
-                <xs:element name="persons" type="tns:person" maxOccurs="unbounded"/>
+                <xs:element name="persons" type="tns:personDto" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:complexType name="person">
+    <xs:complexType name="personDto">
         <xs:sequence>
             <xs:element name="firstname" type="xs:string"/>
-            <xs:element name="lastname" type="xs:int"/>
+            <xs:element name="lastname" type="xs:string"/>
             <xs:element name="email" type="xs:string"/>
             <xs:element name="phone" type="xs:string"/>
             <xs:element name="birthday" type="xs:date"/>
             <xs:element name="gender" type="tns:gender"/>
-            <xs:element name="address" type="tns:address"/>
+            <xs:element name="address" type="tns:addressDto"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -38,7 +38,7 @@
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:complexType name="address">
+    <xs:complexType name="addressDto">
         <xs:sequence>
             <xs:element name="street" type="xs:string"/>
             <xs:element name="buildingNumber" type="xs:string"/>
