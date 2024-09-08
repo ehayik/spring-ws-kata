@@ -1,9 +1,8 @@
 package io.github.ehayik.kata.domain;
 
+import java.time.LocalDate;
 import lombok.Builder;
 import lombok.NonNull;
-
-import java.time.LocalDate;
 
 @Builder
 public record Person(

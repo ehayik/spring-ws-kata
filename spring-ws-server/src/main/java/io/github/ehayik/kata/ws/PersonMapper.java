@@ -1,12 +1,11 @@
 package io.github.ehayik.kata.ws;
 
+import static org.apache.commons.lang.StringUtils.isBlank;
+
 import io.github.ehayik.kata.domain.Person;
+import java.util.List;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-
-import java.util.List;
-
-import static org.apache.commons.lang.StringUtils.isBlank;
 
 @Mapper(componentModel = "spring")
 public interface PersonMapper {
