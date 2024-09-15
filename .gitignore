@@ -35,4 +35,5 @@ build/
 .DS_Store
 
 *.xjb
+*.episode
 !**/src/main/resources/global.xjb

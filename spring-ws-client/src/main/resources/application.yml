@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: spring-ws-client
+  main:
+    web-application-type: none
+
+ws:
+ server:
+   uri: http://localhost:8080/ws
