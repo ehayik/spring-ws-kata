@@ -31,7 +31,7 @@ class PersonsClientTestIT {
 
     private static final String GET_PERSONS_RESP =
             """
-			<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:per="http://www.example.org/persons">
+			<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
 				<SOAP-ENV:Header/>
 				<SOAP-ENV:Body>
 					<bd:getPersonsResponse xmlns:bd="https://notes.eduardoeljaiek.com/spring-ws-kata/gen">
