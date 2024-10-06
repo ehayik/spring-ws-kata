@@ -1,8 +1,9 @@
 spring:
   application:
     name: spring-ws-client
-  main:
-    web-application-type: none
+
+server:
+  port: 8081
 
 ws:
  server:

@@ -52,6 +52,7 @@ Project Modules:
     ```
 
 ### Running the Client
+
 1. Navigate to the client module directory:
     ```sh
     cd spring-ws-client
