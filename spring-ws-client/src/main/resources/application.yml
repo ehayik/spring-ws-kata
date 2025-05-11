@@ -8,3 +8,7 @@ server:
 ws:
  server:
    uri: http://localhost:8080/ws
+
+logging:
+  level:
+    io.github.ehayik.kata.ws.client.LoggingInterceptor: DEBUG
